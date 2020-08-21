@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>关于我</title>
+    <url>/19487/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+<a id="more"></a>
+
+<p><strong>生于1996❤️</strong></p>
+<p><strong>有喜欢的人</strong></p>
+<p><strong>热爱吉他 滑板</strong></p>
+<video id="video" controls="" preload="none" poster="https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/689edc3dadc7181450becaa2fb9f3483a789c759b11dd1cb540931de705cbdcaafa15c54ae8705663049a18e0466e581?pictype=scale&from=30113&version=3.3.3.3&uin=99172376&fname=avatar.png&size=750">
+      <source id="mp4" src="https://mvvideo11.meitudata.com/5dd810a98c6654930.mp4?k=0a79bd43e974d3b8cc8836b889947681&t=5f1f639e" type="video/mp4">
+</video>
+]]></content>
+      <tags>
+        <tag>关于我</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 基本使用Api</title>
+    <url>/1769128473/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>写作技巧</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谷歌百度搜索我是陈独秀</title>
+    <url>/22703/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+<a id="more"></a>
+
+<p>谷歌百度搜索我是陈独秀</p>
+<p><a href="https://finedemo.cn" class="LinkCard" target="_blank">独秀的博客</a></p>
+<p>demo</p>
+]]></content>
+      <tags>
+        <tag>夹哇成长历程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Makdown使用说明</title>
+    <url>/30919/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+<a id="more"></a>
+
+<h2 id="段落及区块引用"><a href="#段落及区块引用" class="headerlink" title="段落及区块引用"></a>段落及区块引用</h2><blockquote>
+<p>这段文字将被高亮显示<br><a href="http://www.baidu.com/">点击跳转百度</a></p>
+</blockquote>
+<center>demo</center>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/703764-605e3cc2ecb664f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
+<p>注： 引用图片和链接的唯一区别就是在最前方添加一个感叹号。</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>有序列表</li>
+<li>无序列表</li>
+</ul>
+<ol>
+<li>demo</li>
+<li>demo</li>
+</ol>
+<h2 id="使用列表的一些注意事项"><a href="#使用列表的一些注意事项" class="headerlink" title="使用列表的一些注意事项"></a>使用列表的一些注意事项</h2><p>如果在单一列表项中包含了多个段落，为了保证渲染正常，*与段落首字母之间必须保留四个空格</p>
+<ul>
+<li><p>段落一</p>
+<p>小段一</p>
+</li>
+<li><p>段落二</p>
+<p>小段二</p>
+</li>
+<li><p>段落一</p>
+</li>
+</ul>
+<blockquote>
+<p>区块标记一</p>
+</blockquote>
+<ul>
+<li>段落二</li>
+</ul>
+<blockquote>
+<p>区块标记二</p>
+</blockquote>
+<hr>
+<p><strong>这里是粗体</strong></p>
+<p><strong><em>这里是斜体</em></strong></p>
+<h2 id="插入代码块"><a href="#插入代码块" class="headerlink" title="插入代码块"></a>插入代码块</h2><figure class="highlight crystal"><table><tr><td class="code"><pre><span class="line">public void <span class="function"><span class="keyword">fun</span>() &#123;</span></span><br><span class="line"><span class="function">    <span class="title">int</span></span> i;</span><br><span class="line">    System.<span class="keyword">out</span>.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>int i;</code><br><code>int i;</code></p>
+<h2 id="插入表格"><a href="#插入表格" class="headerlink" title="插入表格"></a>插入表格</h2><table>
+<thead>
+<tr>
+<th align="center">表头</th>
+<th>头目一</th>
+<th>头目二</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>写作技巧</tag>
+        <tag>夹哇成长历程</tag>
+      </tags>
+  </entry>
+</search>

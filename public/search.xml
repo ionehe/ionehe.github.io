@@ -62,9 +62,10 @@
 <h2 id="段落及区块引用"><a href="#段落及区块引用" class="headerlink" title="段落及区块引用"></a>段落及区块引用</h2><blockquote>
 <p>这段文字将被高亮显示<br><a href="http://www.baidu.com/">点击跳转百度</a></p>
 </blockquote>
+<p><img data-src="https://picabstract-preview-ftn.weiyun.com/ftn_pic_abs_v3/46761c07812784afea32873ba78450cc75a35f3ddb763ef809f487f8b409e2f0b7c979807d2570729c21069fa1e8ccdb?pictype=scale&from=30013&version=3.3.3.3&uin=99172376&fname=markdown.png&size=750" alt="markdown"></p>
 <center>demo</center>
 
-<p><img src="https://upload-images.jianshu.io/upload_images/703764-605e3cc2ecb664f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/703764-605e3cc2ecb664f6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片"></p>
 <p>注： 引用图片和链接的唯一区别就是在最前方添加一个感叹号。</p>
 <h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
 <li>有序列表</li>

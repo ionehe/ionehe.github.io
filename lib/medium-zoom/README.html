@@ -1,0 +1,436 @@
+<p align="center">
+  <a href="https://medium-zoom.francoischalifour.com"><img src="logo.svg" alt="Demo" width="64"></a>
+  <h3 align="center">medium-zoom</h3>
+  <p align="center">A JavaScript library for zooming images like Medium</p>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/medium-zoom">
+    <img src="https://img.shields.io/npm/v/medium-zoom.svg?style=flat-square" alt="version">
+  </a>
+  <a href="https://github.com/francoischalifour/medium-zoom/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/medium-zoom.svg?style=flat-square" alt="MIT license">
+  </a>
+  <a href="http://npmcharts.com/compare/medium-zoom">
+    <img src="https://img.shields.io/npm/dm/medium-zoom.svg?style=flat-square" alt="downloads">
+  </a>
+  <br>
+  <a href="https://unpkg.com/medium-zoom/dist/">
+    <img src="http://img.badgesize.io/https://unpkg.com/medium-zoom/dist/medium-zoom.min.js?compression=gzip&label=gzip%20size&style=flat-square" alt="gzip size">
+  </a>
+  <a href="https://github.com/francoischalifour/medium-zoom/blob/master/package.json">
+    <img src="https://img.shields.io/badge/dependencies-none-lightgrey.svg?style=flat-square" alt="no dependencies">
+  </a>
+  <a href="https://travis-ci.org/francoischalifour/medium-zoom">
+    <img src="https://img.shields.io/travis/francoischalifour/medium-zoom.svg?style=flat-square" alt="travis">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://medium-zoom.francoischalifour.com">
+    <img src="https://user-images.githubusercontent.com/6137112/43369906-7623239a-9376-11e8-978b-6e089be499fb.gif" alt="Medium Zoom Demo">
+  </a>
+  <br>
+  <br>
+  <strong>
+  <a href="https://codesandbox.io/s/github/francoischalifour/medium-zoom/tree/master/website">🔬 Playground</a> ・
+  <a href="https://medium-zoom.francoischalifour.com">🔎 Demo</a> ・
+  <a href="https://medium-zoom.francoischalifour.com/storybook">📚 Storybook</a>
+  </strong>
+</p>
+
+<details>
+  <summary><strong>Contents</strong></summary>
+
+<!--
+Generate the table of contents using:
+
+```
+npx doctoc README.md --maxlevel 3
+```
+-->
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#api">API</a><ul>
+<li><a href="#selectors">Selectors</a></li>
+<li><a href="#options">Options</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#attributes">Attributes</a></li>
+<li><a href="#events">Events</a></li>
+</ul>
+</li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#browser-support">Browser support</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+</details>
+
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
+<li>📱 <strong>Responsive</strong> — <em>scale on mobile and desktop</em></li>
+<li>🚀 <strong>Performant and lightweight</strong> — <em>should be able to reach 60 <a href="https://en.wikipedia.org/wiki/Frame_rate">fps</a></em></li>
+<li>⚡️ <strong>High definition support</strong> — <em>load the HD version of your image on zoom</em></li>
+<li>🔎 <strong>Flexibility</strong> — <em>apply the zoom to a selection of images</em></li>
+<li>🖱 <strong>Mouse, keyboard and gesture friendly</strong> — <em>click anywhere, press a key or scroll away to close the zoom</em></li>
+<li>🎂 <strong>Event handling</strong> — <em>trigger events when the zoom enters a new state</em></li>
+<li>📦 <strong>Customization</strong> — <em>set your own margin, background and scroll offset</em></li>
+<li>🔧 <strong>Pluggable</strong> — <em>add your own features to the zoom</em></li>
+<li>💎 <strong>Custom templates</strong> — <em>extend the default look to match the UI of your app</em></li>
+</ul>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>The module is available on the <a href="https://www.npmjs.com/">npm</a> registry.</p>
+<pre><code class="sh">npm install medium-zoom
+# or
+yarn add medium-zoom</code></pre>
+<h6 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h6><ul>
+<li><a href="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.js">Normal</a></li>
+<li><a href="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js">Minified</a></li>
+</ul>
+<h6 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h6><ul>
+<li><a href="https://www.jsdelivr.com/package/npm/medium-zoom">jsDelivr</a></li>
+<li><a href="https://unpkg.com/medium-zoom/">unpkg</a></li>
+</ul>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><blockquote>
+<p><a href="https://codesandbox.io/s/github/francoischalifour/medium-zoom/tree/master/website">Try it out in the browser</a></p>
+</blockquote>
+<p>Import the library as a module:</p>
+<pre><code class="js">import mediumZoom from &#39;medium-zoom&#39;</code></pre>
+<p>Or import the library with a script tag:</p>
+<pre><code class="html">&lt;script src=&quot;node_modules/medium-zoom/dist/medium-zoom.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>That’s it! You don’t need to import any CSS styles.</p>
+<p>Assuming you add the <code>data-zoomable</code> attribute to your images:</p>
+<pre><code class="js">mediumZoom(&#39;[data-zoomable]&#39;)</code></pre>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><pre><code class="ts">mediumZoom(selector?: string | HTMLElement | HTMLElement[] | NodeList, options?: object): Zoom</code></pre>
+<h3 id="Selectors"><a href="#Selectors" class="headerlink" title="Selectors"></a>Selectors</h3><p>The selector allows attaching images to the zoom. It can be of the following types:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Selectors">CSS selectors</a></li>
+<li><a href="https://developer.mozilla.org/docs/Web/API/HTMLElement"><code>HTMLElement</code></a></li>
+<li><a href="https://developer.mozilla.org/docs/Web/API/NodeList"><code>NodeList</code></a></li>
+<li><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a></li>
+</ul>
+<pre><code class="js">// CSS selector
+mediumZoom(&#39;[data-zoomable]&#39;)
+
+// HTMLElement
+mediumZoom(document.querySelector(&#39;#cover&#39;))
+
+// NodeList
+mediumZoom(document.querySelectorAll(&#39;[data-zoomable]&#39;))
+
+// Array
+const images = [
+  document.querySelector(&#39;#cover&#39;),
+  ...document.querySelectorAll(&#39;[data-zoomable]&#39;),
+]
+
+mediumZoom(images)</code></pre>
+<h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><p>The options enable the customization of the zoom. They are defined as an object with the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>margin</code></td>
+<td><code>number</code></td>
+<td><code>0</code></td>
+<td>The space outside the zoomed image</td>
+</tr>
+<tr>
+<td><code>background</code></td>
+<td><code>string</code></td>
+<td><code>&quot;#fff&quot;</code></td>
+<td>The background of the overlay</td>
+</tr>
+<tr>
+<td><code>scrollOffset</code></td>
+<td><code>number</code></td>
+<td><code>40</code></td>
+<td>The number of pixels to scroll to close the zoom</td>
+</tr>
+<tr>
+<td><code>container</code></td>
+<td><code>string</code> | <code>HTMLElement</code> | <code>object</code></td>
+<td><code>null</code></td>
+<td>The viewport to render the zoom in<br> <a href="docs/container.md">Read more →</a></td>
+</tr>
+<tr>
+<td><code>template</code></td>
+<td><code>string</code> | <code>HTMLTemplateElement</code></td>
+<td><code>null</code></td>
+<td>The template element to display on zoom<br> <a href="docs/template.md">Read more →</a></td>
+</tr>
+</tbody></table>
+<pre><code class="js">mediumZoom(&#39;[data-zoomable]&#39;, {
+  margin: 24,
+  background: &#39;#BADA55&#39;,
+  scrollOffset: 0,
+  container: &#39;#zoom-container&#39;,
+  template: &#39;#zoom-template&#39;,
+})</code></pre>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><h4 id="open-target-HTMLElement-Promise-lt-Zoom-gt"><a href="#open-target-HTMLElement-Promise-lt-Zoom-gt" class="headerlink" title="open({ target?: HTMLElement }): Promise&lt;Zoom&gt;"></a><code>open({ target?: HTMLElement }): Promise&lt;Zoom&gt;</code></h4><p>Opens the zoom and returns a promise resolving with the zoom.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.open()</code></pre>
+<p><em>Emits an event <a href="#events"><code>open</code></a> on animation start and <a href="#events"><code>opened</code></a> when completed.</em></p>
+<h4 id="close-Promise-lt-Zoom-gt"><a href="#close-Promise-lt-Zoom-gt" class="headerlink" title="close(): Promise&lt;Zoom&gt;"></a><code>close(): Promise&lt;Zoom&gt;</code></h4><p>Closes the zoom and returns a promise resolving with the zoom.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.close()</code></pre>
+<p><em>Emits an event <a href="#events"><code>close</code></a> on animation start and <a href="#events"><code>closed</code></a> when completed.</em></p>
+<h4 id="toggle-target-HTMLElement-Promise-lt-Zoom-gt"><a href="#toggle-target-HTMLElement-Promise-lt-Zoom-gt" class="headerlink" title="toggle({ target?: HTMLElement }): Promise&lt;Zoom&gt;"></a><code>toggle({ target?: HTMLElement }): Promise&lt;Zoom&gt;</code></h4><p>Opens the zoom when closed / dismisses the zoom when opened, and returns a promise resolving with the zoom.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.toggle()</code></pre>
+<h4 id="attach-selectors-string-HTMLElement-NodeList-Array-Zoom"><a href="#attach-selectors-string-HTMLElement-NodeList-Array-Zoom" class="headerlink" title="attach(...selectors: string[] | HTMLElement[] | NodeList[] | Array[]): Zoom"></a><code>attach(...selectors: string[] | HTMLElement[] | NodeList[] | Array[]): Zoom</code></h4><p>Attaches the images to the zoom and returns the zoom.</p>
+<pre><code class="js">const zoom = mediumZoom()
+
+zoom.attach(&#39;#image-1&#39;, &#39;#image-2&#39;)
+zoom.attach(
+  document.querySelector(&#39;#image-3&#39;),
+  document.querySelectorAll(&#39;[data-zoomable]&#39;)
+)</code></pre>
+<h4 id="detach-selectors-string-HTMLElement-NodeList-Array-Zoom"><a href="#detach-selectors-string-HTMLElement-NodeList-Array-Zoom" class="headerlink" title="detach(...selectors: string[] | HTMLElement[] | NodeList[] | Array[]): Zoom"></a><code>detach(...selectors: string[] | HTMLElement[] | NodeList[] | Array[]): Zoom</code></h4><p>Releases the images from the zoom and returns the zoom.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.detach(&#39;#image-1&#39;, document.querySelector(&#39;#image-2&#39;)) // detach two images
+zoom.detach() // detach all images</code></pre>
+<p><em>Emits an event <a href="#events"><code>detach</code></a> on the image.</em></p>
+<h4 id="update-options-object-Zoom"><a href="#update-options-object-Zoom" class="headerlink" title="update(options: object): Zoom"></a><code>update(options: object): Zoom</code></h4><p>Updates the options and returns the zoom.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.update({ background: &#39;#BADA55&#39; })</code></pre>
+<p><em>Emits an event <a href="#events"><code>update</code></a> on each image of the zoom.</em></p>
+<h4 id="clone-options-object-Zoom"><a href="#clone-options-object-Zoom" class="headerlink" title="clone(options?: object): Zoom"></a><code>clone(options?: object): Zoom</code></h4><p>Clones the zoom with provided options merged with the current ones and returns the zoom.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;, { background: &#39;#BADA55&#39; })
+
+const clonedZoom = zoom.clone({ margin: 48 })
+
+clonedZoom.getOptions() // =&gt; { background: &#39;#BADA55&#39;, margin: 48, ... }</code></pre>
+<h4 id="on-type-string-listener-gt-void-options-boolean-AddEventListenerOptions-Zoom"><a href="#on-type-string-listener-gt-void-options-boolean-AddEventListenerOptions-Zoom" class="headerlink" title="on(type: string, listener: () =&gt; void, options?: boolean | AddEventListenerOptions): Zoom"></a><code>on(type: string, listener: () =&gt; void, options?: boolean | AddEventListenerOptions): Zoom</code></h4><p>Registers the listener on each target of the zoom.</p>
+<p>The same <code>options</code> as <a href="https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener#Parameters"><code>addEventListener</code></a> are used.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.on(&#39;closed&#39;, event =&gt; {
+  // the image has been closed
+})
+
+zoom.on(
+  &#39;open&#39;,
+  event =&gt; {
+    // the image has been opened (tracked only once)
+  },
+  { once: true }
+)</code></pre>
+<p>The zoom object is accessible in <code>event.detail.zoom</code>.</p>
+<h4 id="off-type-string-listener-gt-void-options-boolean-AddEventListenerOptions-Zoom"><a href="#off-type-string-listener-gt-void-options-boolean-AddEventListenerOptions-Zoom" class="headerlink" title="off(type: string, listener: () =&gt; void, options?: boolean | AddEventListenerOptions): Zoom"></a><code>off(type: string, listener: () =&gt; void, options?: boolean | AddEventListenerOptions): Zoom</code></h4><p>Removes the previously registered listener on each target of the zoom.</p>
+<p>The same <code>options</code> as <a href="https://developer.mozilla.org/docs/Web/API/EventTarget/removeEventListener#Parameters"><code>removeEventListener</code></a> are used.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+function listener(event) {
+  // ...
+}
+
+zoom.on(&#39;open&#39;, listener)
+// ...
+zoom.off(&#39;open&#39;, listener)</code></pre>
+<p>The zoom object is accessible in <code>event.detail.zoom</code>.</p>
+<h4 id="getOptions-object"><a href="#getOptions-object" class="headerlink" title="getOptions(): object"></a><code>getOptions(): object</code></h4><p>Returns the zoom options as an object.</p>
+<pre><code class="js">const zoom = mediumZoom({ background: &#39;#BADA55&#39; })
+
+zoom.getOptions() // =&gt; { background: &#39;#BADA55&#39;, ... }</code></pre>
+<h4 id="getImages-HTMLElement"><a href="#getImages-HTMLElement" class="headerlink" title="getImages(): HTMLElement[]"></a><code>getImages(): HTMLElement[]</code></h4><p>Returns the images attached to the zoom as an array of <a href="https://developer.mozilla.org/docs/Web/API/HTMLElement"><code>HTMLElement</code>s</a>.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.getImages() // =&gt; [HTMLElement, HTMLElement]</code></pre>
+<h4 id="getZoomedImage-HTMLElement"><a href="#getZoomedImage-HTMLElement" class="headerlink" title="getZoomedImage(): HTMLElement"></a><code>getZoomedImage(): HTMLElement</code></h4><p>Returns the current zoomed image as an <a href="https://developer.mozilla.org/docs/Web/API/HTMLElement"><code>HTMLElement</code></a> or <code>null</code> if none.</p>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.getZoomedImage() // =&gt; null
+zoom.open().then(() =&gt; {
+  zoom.getZoomedImage() // =&gt; HTMLElement
+})</code></pre>
+<h3 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h3><h4 id="data-zoom-src"><a href="#data-zoom-src" class="headerlink" title="data-zoom-src"></a><code>data-zoom-src</code></h4><p>Specifies the high definition image to open on zoom. This image loads when the user clicks on the source image.</p>
+<pre><code class="html">&lt;img src=&quot;image-thumbnail.jpg&quot; data-zoom-src=&quot;image-hd.jpg&quot; alt=&quot;My image&quot; /&gt;</code></pre>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>open</td>
+<td>Fired immediately when the <code>open</code> method is called</td>
+</tr>
+<tr>
+<td>opened</td>
+<td>Fired when the zoom has finished being animated</td>
+</tr>
+<tr>
+<td>close</td>
+<td>Fired immediately when the <code>close</code> method is called</td>
+</tr>
+<tr>
+<td>closed</td>
+<td>Fired when the zoom out has finished being animated</td>
+</tr>
+<tr>
+<td>detach</td>
+<td>Fired when the <code>detach</code> method is called</td>
+</tr>
+<tr>
+<td>update</td>
+<td>Fired when the <code>update</code> method is called</td>
+</tr>
+</tbody></table>
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.on(&#39;open&#39;, event =&gt; {
+  // track when the image is zoomed
+})</code></pre>
+<p>The zoom object is accessible in <code>event.detail.zoom</code>.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><details>
+ <summary>Trigger a zoom from another element</summary>
+
+<pre><code class="js">const button = document.querySelector(&#39;[data-action=&quot;zoom&quot;]&#39;)
+const zoom = mediumZoom(&#39;#image&#39;)
+
+button.addEventListener(&#39;click&#39;, () =&gt; zoom.open())</code></pre>
+</details>
+
+<details>
+ <summary>Track an event (for analytics)</summary>
+
+<p>You can use the <code>open</code> event to keep track of how many times a user interacts with your image. This can be useful if you want to gather some analytics on user engagement.</p>
+<pre><code class="js">let counter = 0
+const zoom = mediumZoom(&#39;#image-tracked&#39;)
+
+zoom.on(&#39;open&#39;, event =&gt; {
+  console.log(`&quot;${event.target.alt}&quot; has been zoomed ${++counter} times`)
+})</code></pre>
+</details>
+
+<details>
+ <summary>Detach a zoom once closed</summary>
+
+<pre><code class="js">const zoom = mediumZoom(&#39;[data-zoomable]&#39;)
+
+zoom.on(&#39;closed&#39;, () =&gt; zoom.detach(), { once: true })</code></pre>
+</details>
+
+<details>
+ <summary>Attach jQuery elements</summary>
+
+<p>jQuery elements are compatible with <code>medium-zoom</code> once converted to an array.</p>
+<pre><code class="js">mediumZoom($(&#39;[data-zoomable]&#39;).toArray())</code></pre>
+</details>
+
+<details>
+ <summary>Create a zoomable React component</summary>
+
+<p><strong>Using React hooks</strong></p>
+<pre><code class="js">import React from &#39;react&#39;
+import mediumZoom from &#39;medium-zoom&#39;
+
+function ImageZoom({ zoom, src, alt, background }) {
+  const zoomRef = React.useRef(zoom.clone({ background }))
+
+  function attachZoom(image) {
+    zoomRef.current.attach(image)
+  }
+
+  return &lt;img src={src} alt={alt} ref={attachZoom} /&gt;
+}
+
+function App() {
+  const zoom = React.useRef(mediumZoom({ background: &#39;#000&#39;, margin: 48 }))
+
+  render() {
+    return (
+      &lt;ImageZoom src=&quot;image.jpg&quot; alt=&quot;Image&quot; zoom={zoom.current} color=&quot;#BADA55&quot; /&gt;
+    )
+  }
+}</code></pre>
+<p><strong>Using React classes</strong></p>
+<pre><code class="js">import React, { Component } from &#39;react&#39;
+import mediumZoom from &#39;medium-zoom&#39;
+
+class ImageZoom extends Component {
+  zoom = this.props.zoom.clone({
+    background: this.props.color,
+  })
+
+  attachZoom = image =&gt; {
+    this.zoom.attach(image)
+  }
+
+  render() {
+    return (
+      &lt;img src={this.props.src} alt={this.props.alt} ref={this.attachZoom} /&gt;
+    )
+  }
+}
+
+class App extends Component {
+  zoom = mediumZoom({ background: &#39;#000&#39;, margin: 48 })
+
+  render() {
+    return (
+      &lt;ImageZoom src=&quot;image.jpg&quot; alt=&quot;Image&quot; zoom={this.zoom} color=&quot;#BADA55&quot; /&gt;
+    )
+  }
+}</code></pre>
+</details>
+<br>
+
+<p>You can see <a href="examples/">more examples</a> including <a href="examples/react">React</a> and <a href="examples/vue">Vue</a>, or check out the <a href="https://medium-zoom.francoischalifour.com/storybook">storybook</a>.</p>
+<h2 id="Browser-support"><a href="#Browser-support" class="headerlink" title="Browser support"></a>Browser support</h2><table>
+<thead>
+<tr>
+<th>IE</th>
+<th>Edge</th>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Safari</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10<sup>*</sup></td>
+<td>12<sup>*</sup></td>
+<td>36</td>
+<td>34</td>
+<td>9</td>
+</tr>
+</tbody></table>
+<p><sup>*</sup> <em>These browsers require a <a href="https://github.com/webcomponents/template"><code>template</code> polyfill</a> when using <a href="docs/template.md">custom templates</a></em>.</p>
+<blockquote>
+  <p align="center">
+    Cross-browser testing is sponsored by
+  </p>
+  <p align="center">
+    <a href="https://www.browserstack.com">
+      <img src="https://user-images.githubusercontent.com/6137112/44587083-35987000-a7b2-11e8-8e0d-8ba15de83802.png" alt="BrowserStack" height="35">
+    </a>
+  </p>
+</blockquote>
+
+<h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><ul>
+<li>Run <code>yarn</code> to install Node dev dependencies</li>
+<li>Run <code>yarn start</code> to build the library in watch mode</li>
+<li>Run <code>yarn run storybook</code> to see your changes at <a href="http://localhost:9001/">http://localhost:9001</a></li>
+</ul>
+<p>Please read the <a href="CONTRIBUTING.md">contributing guidelines</a> for more detailed explanations.</p>
+<p><em>You can also use <a href="https://www.npmjs.com/">npm</a>.</em></p>
+<h2 id="License"><a href="#License" class="headerlink" title="License"></a>License</h2><p>MIT © <a href="https://francoischalifour.com/">François Chalifour</a></p>

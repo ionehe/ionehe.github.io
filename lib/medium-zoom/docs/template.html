@@ -1,0 +1,24 @@
+<h1 id="Using-a-custom-template"><a href="#Using-a-custom-template" class="headerlink" title="Using a custom template"></a>Using a custom template</h1><p>You might want to render the zoom in your own template. You could reproduce zooms as seen on <a href="https://codesandbox.io/s/github/francoischalifour/medium-zoom/tree/master/examples/facebook-template">Facebook</a> or <a href="https://codesandbox.io/s/github/francoischalifour/medium-zoom/tree/master/examples/dropbox-paper-template">Dropbox Paper</a>. This is possible with the <code>template</code> option.</p>
+<ol>
+<li>Create a <a href="https://developer.mozilla.org/docs/Web/HTML/Element/template"><code>template</code></a> element</li>
+<li>Add the template selector or the element to the <code>template</code> option</li>
+</ol>
+<pre><code class="html">&lt;template id=&quot;zoom-template&quot;&gt;
+  &lt;div&gt;
+    &lt;header&gt;My image zoom template&lt;/header&gt;
+    &lt;div id=&quot;zoom-container&quot;&gt;&lt;/div&gt;
+    &lt;aside&gt;Comment on my image&lt;/aside&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  mediumZoom(&#39;[data-zoom]&#39;, {
+    template: &#39;#zoom-template&#39;,
+    container: &#39;#zoom-container&#39;
+  })
+&lt;/script&gt;</code></pre>
+<p><a href="container.md">Using a container</a> within a template is possible.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><ul>
+<li><a href="https://codesandbox.io/s/github/francoischalifour/medium-zoom/tree/master/examples/dropbox-paper-template">Dropbox Paper</a></li>
+<li><a href="https://codesandbox.io/s/github/francoischalifour/medium-zoom/tree/master/examples/facebook-template">Facebook</a></li>
+</ul>
